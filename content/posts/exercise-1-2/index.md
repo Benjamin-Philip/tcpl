@@ -69,4 +69,4 @@ sequences, we don't know *what* they print. This just seems boring. So
 here is a [Wikipedia Link](https://en.wikipedia.org/wiki/Escape_sequences_in_C
 "Answer") to the Answer.
 
-Here is my [C file](escape.c) and my [makefile](makefile)
+Here is my [C file](src/escape.c) and my [makefile](src/makefile)

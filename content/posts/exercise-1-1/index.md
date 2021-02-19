@@ -104,4 +104,4 @@ brackets.
 
 Brian Kernighan and Dennis Ritchie know `C`'s syntax.
 
-Here's my [C file](hello-world.c) and my [makefile](makefile).
+Here's my [C file](src/hello-world.c) and my [makefile](src/makefile).
