@@ -1,0 +1,3 @@
+[submodule "themes/textbook"]
+	path = themes/textbook
+	url = https://github.com/Benjamin-Philip/textbook
