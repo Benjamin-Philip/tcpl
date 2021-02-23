@@ -22,10 +22,6 @@ theme = "textbook"
     footer = "Copyright &#xA9; 2021 [Benjamin Philip](https://benjamin-philip.github.io). All Rights Reserved."
     mainSections = ["exercises"]
 
-    # Google Tag Manager Support
-    gtm_id = "GTM-WRMGHCR"
-    gtm_layer = "basic"
-
     [params.math]
         katex = true
         allPages = true
