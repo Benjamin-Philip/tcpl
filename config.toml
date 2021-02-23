@@ -1,3 +1,41 @@
-baseURL = "http://example.org/"
+baseURL = "https://bphilip.gitlab.io/tcpl"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "The C Programming Language"
+theme = "textbook"
+
+
+[menu]
+  [[menu.main]]
+    indentifier = "home"
+    name = "home"
+    url = ""
+    weight = 1
+
+  [[menu.main]]
+    identifier = "about"
+    name = "about"
+    url = "/about/"
+    weight = 2
+
+[params]
+    AuthorName = "Benjamin Philip"
+    footer = "Copyright &#xA9; 2021 [Benjamin Philip](https://benjamin-philip.github.io). All Rights Reserved."
+    mainSections = ["exercises"]
+
+    [params.math]
+        katex = true
+        allPages = true
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNumbersInTable = true
+    lineNos = false
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
