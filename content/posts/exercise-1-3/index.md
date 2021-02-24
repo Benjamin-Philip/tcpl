@@ -1,6 +1,6 @@
 ---
 title: Tcpl Exercise-1-3
-date: "2021-2-19"
+date: "2021-02-19"
 ---
 
 This is the {{<tex>}}3^{rd}{{</tex>}} exercise from Tcpl. Here we write a
