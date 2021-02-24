@@ -1,6 +1,6 @@
 ---
 title: Tcpl Exercise 1-4
-date: "2021/02/20"
+date: "2021-02-20"
 ---
 
 This is the {{<tex>}}4^{th}{{</tex>}} exercise in Tcpl. Here, we write a Celsius
