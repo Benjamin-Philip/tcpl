@@ -3,7 +3,7 @@ title: Tcpl Exercise 1-6
 date: "2021-03-01"
 ---
 
-This is the {{<tex>}}5^{th}{{</tex>}} exercise from Tcpl. Here we try to find
+This is the {{<tex>}}6^{th}{{</tex>}} exercise from Tcpl. Here we try to find
 the value of  `true` and `false` in C (ANSI C doesn't have a bool datatype).
 
 # The Question
@@ -18,7 +18,7 @@ however, there isn't a `bool` datatype by default.
 
 ## How we find the answer
 
-The Question in other words, we need to find the values of `true` and `false`.
+So, the Question in other words, is we need to find the values of `true` and `false`.
 
 Now, this simplest way to find the value of something, is to print. That means,
 we print `true` and `false`. However, we don't know *where* we get `true` and
@@ -99,4 +99,4 @@ Quite unexpected! In `ruby`, 0 can be considered `true` and 1 `false`
 
 As the value of `true` is 1 and `false` 0, `getchar() != EOF` is always 1 or 0.
 
-Here is my [C file](src/bool.c) and my [makefile][src/makefile]
+Here is my [C file](src/bool.c) and my [makefile](src/makefile)
