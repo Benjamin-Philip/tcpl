@@ -30,9 +30,7 @@ main(){
 You will notice that `c` is an integer. It is being compared to `EOF` which is
 a constant. This leads me to believe that `EOF` is of integer type.
 
-So typical of C. Using integers for important values
-
-So, we can simple print the constant:
+So, we can simply print the constant:
 
 ```c
 #include <stdio.h>
