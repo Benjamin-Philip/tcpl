@@ -1,5 +1,5 @@
 ---
-title: Tcpl Exercise 1-6
+title:  Exercise 1-6
 date: "2021-03-01"
 ---
 
