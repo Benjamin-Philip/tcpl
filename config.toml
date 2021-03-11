@@ -14,7 +14,7 @@ theme = "textbook"
   [[menu.main]]
     identifier = "about"
     name = "about"
-    url = "/about/"
+    url = "about"
     weight = 2
 
 [params]
