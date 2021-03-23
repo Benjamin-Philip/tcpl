@@ -1,5 +1,5 @@
 ---
-title: Ex 1-9
+title: Exercise 1-9
 date: 2021-03-23
 ---
 
