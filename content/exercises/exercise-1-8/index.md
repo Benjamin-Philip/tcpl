@@ -3,7 +3,7 @@ title: Exercise 1-8
 date: "2021-03-19"
 ---
 
-This is the {{<tex>}}5^{th}{{</tex>}} exercise in Tcpl. Here, we count the
+This is the {{<tex>}}8^{th}{{</tex>}} exercise in Tcpl. Here, we count the
 number of tabs, newlines and spaces in input.
 
 # The Question
