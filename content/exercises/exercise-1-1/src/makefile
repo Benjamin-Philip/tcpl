@@ -4,12 +4,14 @@
 # @file
 # @version 0.1
 
-all: hello-world
+objects = hello-world
+all: $(objects)
 
 hello-world: hello-world.c
 	cc hello-world.c -o hello-world
 
+.PHONY: clean
 clean:
-	rm -f hello-world
+	-rm -f $(objects)
 
 # end

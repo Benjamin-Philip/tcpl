@@ -4,12 +4,14 @@
 # @file
 # @version 0.1
 
-all: temp
+objects = temp
+all: $(objects)
 
 temp: temp.c
 	cc temp.c -o temp
 
+.PHONY: clean
 clean:
-	rm -f temp
+	-rm -f $(objects)
 
 # end

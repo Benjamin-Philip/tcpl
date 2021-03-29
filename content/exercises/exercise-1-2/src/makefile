@@ -4,12 +4,14 @@
 # @file
 # @version 0.1
 
-all: escape
+objects = escape
+all: $(objects)
 
 escape: escape.c
 	cc escape.c -o escape
 
+.PHONY: clean
 clean:
-	rm -f escape
+	-rm -f $(objects)
 
 # end

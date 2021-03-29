@@ -4,12 +4,14 @@
 # @file
 # @version 0.1
 
-all: puteof
+objects = puteof
+all: $(objects)
 
 puteof: puteof.c
 	cc puteof.c -o puteof
 
+.PHONY: clean
 clean:
-	rm -f puteof
+	-rm -f $(objects)
 
 # end

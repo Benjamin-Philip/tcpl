@@ -4,12 +4,14 @@
 # @file
 # @version 0.1
 
-all: count
+objects = count
+all: $(objects)
 
 count: count.c
 	cc count.c -o count
 
+.PHONY: clean
 clean:
-	rm -f count
+	-rm -f all $(objects)
 
 # end
