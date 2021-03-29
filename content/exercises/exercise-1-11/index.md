@@ -3,7 +3,7 @@ title: "Exercise 1-11"
 date: 2021-03-29T15:58:07+05:30
 ---
 
-This is the {{<tex>}}11^{th}{{<tex>}} exercise from Tcpl. Here we test the example word program.
+This is the {{<tex>}}11^{th}{{</tex>}} exercise from Tcpl. Here we test the example word program.
 
 # The Question
 
