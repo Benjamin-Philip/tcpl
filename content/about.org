@@ -1,0 +1,17 @@
+#+title: About
+#+date: <2026-01-04 Sun>
+* Introduction
+"The C Programming Language" by Kernighan and Ritchie is considered a rite of
+passage for *all* programmers, no matter background. This site serves as a log of
+my journey through that path, and represents my "mark" at the end along with
+countless others and even more to come.
+
+Less poetically, K&R is the text I am using to prepare for the "Programming in
+C" course in the second semester of my Computer Science education (and primarily
+to learn C for my own use). The semester starts end of February of this year,
+I'm hoping I'll finish the book end to end by April? Hopefully that prediction
+ages well.
+* Local Setup
+As of January 2026, I'm running Fedora, so I'll be using GCC and GNUmake as my
+compiler and build tool. I attempt exercises in Emacs Org files, but I'm yet to
+decide whether Org Babel or a manual tangle-and-compile meets my needs better.
