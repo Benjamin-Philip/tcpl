@@ -1,0 +1,31 @@
+baseURL = 'https://benjamin-philip.github.io/tcpl/'
+languageCode = 'en-us'
+title = 'The C Prog Language'
+disqusShortname = "spf13"       # Force giscus
+
+[params]
+  description = 'My log of working through Kernighan and Ritchie' 
+  themeColor = 'theme-base-0d'
+
+  [params.author]
+    name = "Benjamin Philip"
+    email = "benjamin.philip495@gmail.com"
+
+[Menus]
+  main = [
+    {Name = "About", URL = "/about"},
+    {Name = "Book", URL = "https://en.wikipedia.org/wiki/The_C_Programming_Language"},
+    {Name = "GitHub", URL = "https://github.com/Benjamin-Philip/tcpl"},
+  ]
+
+[outputs]
+  home = ["HTML", "RSS", "ATOM"]
+  section = ["HTML", "RSS", "ATOM"]
+  taxonomy = ["HTML", "RSS", "ATOM"]
+
+[module]
+  [[module.imports]]
+    path = 'github.com/spf13/hyde'
+
+  [[module.imports]]
+    path = 'github.com/kaushalmodi/hugo-atom-feed'

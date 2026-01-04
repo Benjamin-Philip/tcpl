@@ -1,0 +1,20 @@
+{{ if hugo.IsServer }}
+  <p>giscus comments are not available by default when the website is previewed locally.</p>
+{{ else }}
+  <script src="https://giscus.app/client.js"
+          data-repo="Benjamin-Philip/sicp"
+          data-repo-id="R_kgDOPJJtRQ"
+          data-category="Comments"
+          data-category-id="DIC_kwDOPJJtRc4Csr2T"
+          data-mapping="title"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="light"
+          data-lang="en"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+{{ end }}

@@ -1,0 +1,4 @@
+github.com/kaushalmodi/hugo-atom-feed v0.2.0 h1:7jeUfQTBal7SjcAR0fPMKIsfMXb8OLoTo1BPMkLO1vQ=
+github.com/kaushalmodi/hugo-atom-feed v0.2.0/go.mod h1:eNCxNrqVpeR5IvtTrAB1J8ruthtI3KtHMlOIwp0rafo=
+github.com/spf13/hyde v1.3.0 h1:7zf9f7xxMfD5KwdrJU+V2w7yi1W8dKKyzvNtQkuh0sE=
+github.com/spf13/hyde v1.3.0/go.mod h1:CSmLWCbXXInaA5zAkwAQ0EbwpR7Pe74eSmDxdGspoCY=
