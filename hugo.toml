@@ -18,10 +18,12 @@ disqusShortname = "spf13"       # Force giscus
     {Name = "GitHub", URL = "https://github.com/Benjamin-Philip/tcpl"},
   ]
 
-[outputs]
-  home = ["HTML", "RSS", "ATOM"]
-  section = ["HTML", "RSS", "ATOM"]
-  taxonomy = ["HTML", "RSS", "ATOM"]
+# Temporarily disable hugo-atom-feed due to version incompatabilites
+
+# [outputs]
+#   home = ["HTML", "RSS", "ATOM"]
+#   section = ["HTML", "RSS", "ATOM"]
+#   taxonomy = ["HTML", "RSS", "ATOM"]
 
 [module]
   [[module.imports]]
