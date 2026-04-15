@@ -1,8 +1,10 @@
 {{ define "main" -}}
 <div class="posts">
 {{ range .Site.Sections -}}
-<h1 style="font-size: 3.25rem; margin-bottom: 1rem;"><a href={{ .RelPermalink }}>{{ .Title }}</a></h1>
-{{ range .RegularPages -}}
+    <h1 style="font-size: 3.25rem; margin-bottom: 1rem;"><a href={{ .RelPermalink }}>{{ .Title }}</a></h1>
+    {{ range .Data.Pages -}}
+        <h2 style="font-size: 2.75rem; margin-bottom: 1rem;"><a href={{ .RelPermalink }}>{{ .Title }}</a></h2>
+        {{ range .RegularPages -}}
 <article class="post">
   <h1 class="post-title">
     <a href="{{ .Permalink }}">{{ .Title }}</a>
@@ -15,6 +17,7 @@
   </div>
   {{ end }}
 </article>
+{{- end }}
 {{- end }}
 {{- end }}
 </div>
