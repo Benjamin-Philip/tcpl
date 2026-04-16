@@ -1,2 +1,10 @@
-#+title: Chapter 1
+#+title: Chapter 1: A Tutorial Introduction
 #+date: 2026-01-04
+#+weight: 1000
+#+categories: chapter
+
+This chapter is a quick introduction to C. It is meant to cover just enough that
+you can write useful programs, without bogging you down on the specifics. It
+intentionally leaves out more complex features that are important for bigger
+programs. You can use it as a framework to read the detailed descriptions in the
+later chapters.

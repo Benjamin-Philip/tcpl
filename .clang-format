@@ -1,0 +1,6 @@
+---
+BasedOnStyle: WebKit
+IndentWidth: 8
+UseTab: Never
+BreakBeforeBraces: Linux
+AllowShortIfStatementsOnASingleLine: true

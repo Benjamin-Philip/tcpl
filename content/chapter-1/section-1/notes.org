@@ -1,0 +1,55 @@
+#+title: Notes 1.1
+#+date: <2026-04-15 Wed>
+#+weight: 1100
+#+categories: notes
+* Hello, World
+In every language to first program to write is the same - the classic [[https://en.wikipedia.org/wiki/%22Hello,_World!%22_program][Hello,
+World!]] program. In C it is written as thus:
+
+#+begin_src c
+#include <stdio.h>
+
+main()
+{
+        printf("hello, world\n");
+}
+#+end_src
+
+If you saved it in a file called ~hello.c~ (all C programs are saved in a file
+with the ".c" extension), you can compile with the following command:
+
+#+begin_src bash
+cc hello.c
+#+end_src
+
+It will produce a file ~a.out~, which you can run by typing ~a.out~. If you execute
+it, it will print
+
+#+begin_src text
+hello, world
+#+end_src
+
+* What does each line mean?
+
+Here's the same program with comments explaining each line:
+
+#+begin_src c
+#include <stdio.h> // include the standard library
+
+main() // define a function named main that receives no arguments
+{ // statements of main are enclosed in braces
+        printf("hello, world\n"); // main calls library function
+        // printf to print this sequence of characters
+        // \n represents the newline character
+}
+#+end_src
+
+Here's a bunch of important notes:
+
+- programs begin by executing ~main~ 
+- data is passed between functions by providing a list of values called /arguments/
+  - our ~main~ doesn't expect any arguments
+  - ~printf~ expects atleast 1.
+- A sequence in double quotes is a /character string/, or a /string constant/ 
+- ~\n~ is a an escape sequence. Others include ~\t~ for tab , ~\b~ for backspace, and ~\\~ for the backspace itself.
+- ~printf~ by default doesn't print a newline, ~"hello, world\n"~ could be printed as ~"hello, "~, ~"world"~, ~"\n"~.
