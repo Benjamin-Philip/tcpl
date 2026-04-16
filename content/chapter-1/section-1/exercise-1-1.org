@@ -1,0 +1,28 @@
+#+title: Exercise 1-1
+#+date: <2026-04-16 Thu>
+#+weight: 1101
+#+categories: exercises
+* The Question
+*Exercise 1-1*: Run the ~"hello, world~ program on your system. Experiment with
+leaving out parts of the program, to see what error messages you get.
+
+* Solution
+Well, compiling the supplied program (with ~gcc -ansi -o hello hello.c~ ):
+
+#+begin_src C
+#include <stdio.h>
+
+main()
+{
+        printf("hello, world\n");
+}
+#+end_src
+
+and then running with ~./hello~ yields:
+
+#+begin_src text
+hello, world
+#+end_src
+
+I'm going to skip breaking the program. That's ideally something you should try
+yourself.
