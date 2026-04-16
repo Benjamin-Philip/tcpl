@@ -1,0 +1,123 @@
+#+title: Exercise 1-2
+#+date: <2026-04-16 Thu>
+#+weight: 1102
+#+categories: exercise
+* The Question
+*Exercise 1-2*: Experiment to find out what happens when ~printf~'s argument contains ~\c~, where ~c~ is some character not listed above.
+* Solution
+Here's a program that will trial *all* 26 letters of the alphabet in upper case and
+lower case forms. The lines I have commented prevent compilation.
+
+#+begin_src C :results output
+#include <stdio.h>
+
+int main()
+{
+        printf("A: \A some text\n");
+        printf("B: \B some text\n");
+        printf("C: \C some text\n");
+        printf("D: \D some text\n");
+        printf("E: \E some text\n");
+        printf("F: \F some text\n");
+        printf("G: \G some text\n");
+        printf("H: \H some text\n");
+        printf("I: \I some text\n");
+        printf("J: \J some text\n");
+        printf("K: \K some text\n");
+        printf("L: \L some text\n");
+        printf("M: \M some text\n");
+        /* printf("N: \N some text\n"); */
+        printf("O: \O some text\n");
+        printf("P: \P some text\n");
+        printf("Q: \Q some text\n");
+        printf("R: \R some text\n");
+        printf("S: \S some text\n");
+        printf("T: \T some text\n");
+        /* printf("U: \U some text\n"); */
+        printf("V: \V some text\n");
+        printf("W: \W some text\n");
+        printf("X: \X some text\n");
+        printf("Y: \Y some text\n");
+        printf("Z: \Z some text\n");
+        printf("a: \a some text\n");
+        printf("b: \b some text\n");
+        printf("c: \c some text\n");
+        printf("d: \d some text\n");
+        printf("e: \e some text\n");
+        printf("f: \f some text\n");
+        printf("g: \g some text\n");
+        printf("h: \h some text\n");
+        printf("i: \i some text\n");
+        printf("j: \j some text\n");
+        printf("k: \k some text\n");
+        printf("l: \l some text\n");
+        printf("m: \m some text\n");
+        printf("n: \n some text\n");
+        /* printf("o: \o some text\n"); */
+        printf("p: \p some text\n");
+        printf("q: \q some text\n");
+        printf("r: \r some text\n");
+        printf("s: \s some text\n");
+        printf("t: \t some text\n");
+        /* printf("u: \u some text\n"); */
+        printf("v: \v some text\n");
+        printf("w: \w some text\n");
+        /* printf("x: \x some text\n"); */
+        printf("y: \y some text\n");
+        printf("z: \z some text\n");
+}
+#+end_src
+
+#+RESULTS:
+#+begin_example
+A: A some text
+B: B some text
+C: C some text
+D: D some text
+E:  some text
+F: F some text
+G: G some text
+H: H some text
+I: I some text
+J: J some text
+K: K some text
+L: L some text
+M: M some text
+O: O some text
+P: P some text
+Q: Q some text
+R: R some text
+S: S some text
+T: T some text
+V: V some text
+W: W some text
+X: X some text
+Y: Y some text
+Z: Z some text
+a:  some text
+b:  some text
+c: c some text
+d: d some text
+e:  some text
+f:  some text
+g: g some text
+h: h some text
+i: i some text
+j: j some text
+k: k some text
+l: l some text
+m: m some text
+n: 
+ some text
+p: p some text
+q: q some text
+r:  some text
+s: s some text
+t: 	 some text
+v:  some text
+w: w some text
+y: y some text
+z: z some text
+#+end_example
+
+Clearly, ~\E~, ~\a~, ~\b~, ~\e~, ~\f~, ~\n~, ~\r~, ~\t~ and ~\v~ has some kind of effect.
