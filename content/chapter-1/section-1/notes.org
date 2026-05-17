@@ -11,7 +11,7 @@ World!]] program. In C it is written as thus:
 
 main()
 {
-        printf("hello, world\n");
+    printf("hello, world\n");
 }
 #+end_src
 
@@ -38,9 +38,9 @@ Here's the same program with comments explaining each line:
 
 main() // define a function named main that receives no arguments
 { // statements of main are enclosed in braces
-        printf("hello, world\n"); // main calls library function
-        // printf to print this sequence of characters
-        // \n represents the newline character
+    printf("hello, world\n"); // main calls library function
+    // printf to print this sequence of characters
+    // \n represents the newline character
 }
 #+end_src
 

@@ -13,58 +13,58 @@ lower case forms. The lines I have commented prevent compilation.
 
 int main()
 {
-        printf("A: \A some text\n");
-        printf("B: \B some text\n");
-        printf("C: \C some text\n");
-        printf("D: \D some text\n");
-        printf("E: \E some text\n");
-        printf("F: \F some text\n");
-        printf("G: \G some text\n");
-        printf("H: \H some text\n");
-        printf("I: \I some text\n");
-        printf("J: \J some text\n");
-        printf("K: \K some text\n");
-        printf("L: \L some text\n");
-        printf("M: \M some text\n");
-        /* printf("N: \N some text\n"); */
-        printf("O: \O some text\n");
-        printf("P: \P some text\n");
-        printf("Q: \Q some text\n");
-        printf("R: \R some text\n");
-        printf("S: \S some text\n");
-        printf("T: \T some text\n");
-        /* printf("U: \U some text\n"); */
-        printf("V: \V some text\n");
-        printf("W: \W some text\n");
-        printf("X: \X some text\n");
-        printf("Y: \Y some text\n");
-        printf("Z: \Z some text\n");
-        printf("a: \a some text\n");
-        printf("b: \b some text\n");
-        printf("c: \c some text\n");
-        printf("d: \d some text\n");
-        printf("e: \e some text\n");
-        printf("f: \f some text\n");
-        printf("g: \g some text\n");
-        printf("h: \h some text\n");
-        printf("i: \i some text\n");
-        printf("j: \j some text\n");
-        printf("k: \k some text\n");
-        printf("l: \l some text\n");
-        printf("m: \m some text\n");
-        printf("n: \n some text\n");
-        /* printf("o: \o some text\n"); */
-        printf("p: \p some text\n");
-        printf("q: \q some text\n");
-        printf("r: \r some text\n");
-        printf("s: \s some text\n");
-        printf("t: \t some text\n");
-        /* printf("u: \u some text\n"); */
-        printf("v: \v some text\n");
-        printf("w: \w some text\n");
-        /* printf("x: \x some text\n"); */
-        printf("y: \y some text\n");
-        printf("z: \z some text\n");
+    printf("A: \A some text\n");
+    printf("B: \B some text\n");
+    printf("C: \C some text\n");
+    printf("D: \D some text\n");
+    printf("E: \E some text\n");
+    printf("F: \F some text\n");
+    printf("G: \G some text\n");
+    printf("H: \H some text\n");
+    printf("I: \I some text\n");
+    printf("J: \J some text\n");
+    printf("K: \K some text\n");
+    printf("L: \L some text\n");
+    printf("M: \M some text\n");
+    /* printf("N: \N some text\n"); */
+    printf("O: \O some text\n");
+    printf("P: \P some text\n");
+    printf("Q: \Q some text\n");
+    printf("R: \R some text\n");
+    printf("S: \S some text\n");
+    printf("T: \T some text\n");
+    /* printf("U: \U some text\n"); */
+    printf("V: \V some text\n");
+    printf("W: \W some text\n");
+    printf("X: \X some text\n");
+    printf("Y: \Y some text\n");
+    printf("Z: \Z some text\n");
+    printf("a: \a some text\n");
+    printf("b: \b some text\n");
+    printf("c: \c some text\n");
+    printf("d: \d some text\n");
+    printf("e: \e some text\n");
+    printf("f: \f some text\n");
+    printf("g: \g some text\n");
+    printf("h: \h some text\n");
+    printf("i: \i some text\n");
+    printf("j: \j some text\n");
+    printf("k: \k some text\n");
+    printf("l: \l some text\n");
+    printf("m: \m some text\n");
+    printf("n: \n some text\n");
+    /* printf("o: \o some text\n"); */
+    printf("p: \p some text\n");
+    printf("q: \q some text\n");
+    printf("r: \r some text\n");
+    printf("s: \s some text\n");
+    printf("t: \t some text\n");
+    /* printf("u: \u some text\n"); */
+    printf("v: \v some text\n");
+    printf("w: \w some text\n");
+    /* printf("x: \x some text\n"); */
+    printf("y: \y some text\n");
+    printf("z: \z some text\n");
 }
 #+end_src
 

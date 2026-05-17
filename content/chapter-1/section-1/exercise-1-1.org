@@ -14,7 +14,7 @@ Well, compiling the supplied program (with ~gcc -ansi -o hello hello.c~ ):
 
 main()
 {
-        printf("hello, world\n");
+    printf("hello, world\n");
 }
 #+end_src
 
