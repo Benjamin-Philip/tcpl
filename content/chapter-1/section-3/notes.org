@@ -1,0 +1,34 @@
+#+title: Notes 1.3
+#+date: <2026-05-17 Sun>
+#+weight: 1300
+#+categories: notes
+* For loops
+Let's try a version of the temperature converter that uses replaces the ~while~
+loop with a ~for~ loop:
+
+#+begin_src C
+#include <stdio.h>
+
+/* print Fahrenheit-Celsius table */
+main()
+{
+    int fahr;
+
+    for (fahr = 0; fahr <= 300; fahr = fahr + 20)
+        printf("%3d %6.1f\n", fahr, (5.0 / 9.0) * (fahr - 32));
+}
+#+end_src
+
+This new program produces the same results as the previous one, but in far fewer
+lines, thanks to the ~for~ loop.
+
+The head of a ~for~ loop consists of 3 parts, wrapped by parentheses and separated
+by semicolons:
+
+- The /initialization/ (~fahr = 0~), runs a statement before the loop starts.
+- The /condition/ (~fahr <= 300~), depending on which the body run, just like the while loop. 
+- The /step/ (~fahr = fahr + 20~), which is executed after each iteration of the body.
+* Eliminating Extra Variables
+This version also eliminates the ~celsius~ variable since it's value is only used
+once. We directly supply the value to ~printf~ shaving yet another line.
+
