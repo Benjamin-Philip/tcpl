@@ -1,0 +1,59 @@
+#+title: Exercise 1-4
+#+date: <2026-05-17 Sun>
+#+weight: 1204
+#+categories: exercise
+* The Question
+*Exercise 1-4*: Write a program to print the corresponding Celsius to Fahrenheit
+table.
+* The Answer
+When we take the formula for Celsius, \(C = \frac{5}{9}(F - 32)\), and solve for Fahrenheit, we get:
+
+\[F = \frac{9}{5}C + 32\]
+
+Thus, we must simply exchange ~celsius~ and ~fahr~ in our previous program, and
+simply update the calculation for ~fahr~:
+
+#+begin_src C
+#include <stdio.h>
+
+/* print Celsius-Fahrenheit table
+   for celsius = 0, 20, ..., 300 */
+main()
+{
+    float fahr, celsius;
+    int lower, upper, step;
+
+    lower = 0; /* lower limit of temperature table */
+    upper = 300; /* upper limit */
+    step = 20; /* step size */
+
+    printf(" C     F  \n");
+
+    celsius = lower;
+    while (celsius <= upper) {
+        fahr = ((9.0 / 5.0) * celsius) + 32;
+        printf("%3.0f %6.1f\n", celsius, fahr);
+        celsius = celsius + step;
+    }
+}
+#+end_src
+
+#+begin_src 
+ C     F  
+  0   32.0
+ 20   68.0
+ 40  104.0
+ 60  140.0
+ 80  176.0
+100  212.0
+120  248.0
+140  284.0
+160  320.0
+180  356.0
+200  392.0
+220  428.0
+240  464.0
+260  500.0
+280  536.0
+300  572.0
+#+end_src
