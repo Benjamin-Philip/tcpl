@@ -1,0 +1,5 @@
+#+title: Section 1.2: Variables and Arithmetic Expressions
+#+date: <2026-05-17 Sun>
+#+weight: 1200
+#+categories: section
+

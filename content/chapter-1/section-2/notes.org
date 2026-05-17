@@ -1,0 +1,223 @@
+#+title: Notes 1.2
+#+date: <2026-05-17 Sun>
+#+weight: 1200
+#+categories: notes
+*  Integral Temperature Conversion
+This is program to print the Fahrenheit-Celsius table:
+
+#+begin_src C
+#include <stdio.h>
+
+/* print Fahrenheit-Celsius table
+   for fahr = 0, 20, ..., 300 */
+main( )
+{
+    int fahr, celsius;
+    int lower, upper, step;
+
+    lower = 0;     /* lower limit of temperature table */
+    upper = 300;   /* uppler limit */
+    step = 20;     /* step size */
+
+    fahr = lower;
+    while (fahr <= upper) {
+        celsius = 5 * (fahr - 32) / 9;
+        printf("%d\t%d\n", fahr, celsius);
+        fahr = fahr + step;
+    }
+}
+#+end_src
+
+* Understanding the New Expressions
+There is some syntax that has been introduced in this program:
+** Comments
+The lines
+#+begin_src C
+/* print Fahrenheit-Celsius table
+   for fahr = 0, 20, ..., 300 */
+#+end_src
+are a /comment/, which is text that explains something. The characters between the
+~/*~ and ~*/~ are ignored by the compiler.
+** Variables
+#+begin_src C
+    int fahr, celsius;
+    int lower, upper, step;
+#+end_src
+declare some variables of the integer type. In C, variables must be declared
+before they are used. A /declaration/ consists of a type and a list of variables.
+
+C has a number of basic data types:
+
+| type   | description                                     |
+|--------+-------------------------------------------------|
+| ~int~    | integer                                         |
+| ~float~  | floating point - numbers with a fractional part |
+| ~char~   | character - a single byte                       |
+| ~short~  | short integer                                   |
+| ~long~   | long integer                                    |
+| ~double~ | double-precision floating point                 |
+
+
+The size of these types are platform dependent, though ~int~ and ~float~ are
+typically 32-bit today.
+
+There are also /arrays/, /structures/ and /unions/ of these types, /pointers/ to them
+and /functions/ that return them.
+
+Variables are given a value with /assignment statements/:
+
+#+begin_src C 
+    lower = 0;
+    upper = 300;
+    step = 20;
+    fahr = lower
+#+end_src
+
+** While loops
+A while loop is a construct used to repeat some operation. It consists of a
+condition and a body. If the condition is true, the body is executed, and if
+not, the while loop is completed, and statement that follows is executed.
+
+In our program
+#+begin_src C
+    while (fahr <= upper) {
+        ...
+    }
+#+end_src
+the statements within the braces (the body) are executed if ~fahr~ is less than or
+equal to ~upper~ (the condition). Once the ~fahr~ exceeds ~upper~ the loop terminates.
+
+The braces are not necessary if the body is a single statement:
+#+begin_src C
+while (i < j)
+    i = 2 * i; 
+#+end_src
+Indenting is strongly recommended for readability.
+
+** The Main Computation
+Most of the work is done in the body of the loop. The Celsius temperature is
+computed like so:
+
+#+begin_src C
+        celsius = 5 * (fahr - 32) / 9;
+#+end_src
+
+The reason we separately multiply by 5 and divide by 9 (as opposed to
+multiplying by 5/9) is because in C, integer division /truncates/: any fractional
+part is discarded. Therefore 5/9, and thus the entire expression, would evaluate
+to 0,
+
+The table is printed with a ~printf~ call:
+
+#+begin_src C
+        printf("%d\t%d\n\n", fahr, celsius);
+#+end_src
+
+However, this results in ugly columns:
+
+#+begin_src
+0	-17
+20	-6
+40	4
+60	15
+80	26
+100	37
+120	48
+140	60
+160	71
+180	82
+200	93
+220	104
+240	115
+260	126
+280	137
+300	148
+#+end_src
+
+which is fixed by specifying the number of digits to print for each column
+(which right justifies each column):
+
+#+begin_src C
+  0    -17
+ 20     -6
+ 40      4
+ 60     15
+ 80     26
+100     37
+120     48
+140     60
+160     71
+180     82
+200     93
+220    104
+240    115
+260    126
+280    137
+300    148
+#+end_src
+
+** Extra Accuracy with Floating-point Numbers
+We can achieve better accuracy with ~float~:
+
+#+begin_src C
+#include <stdio.h>
+
+/* print Fahrenheit-Celsius table
+   for fahr = 0, 20, ..., 300 */
+main() {
+    float fahr, celsius;
+    int lower, upper, step;
+
+    lower = 0;   /* lower limit of temperature table */
+    upper = 300; /* uppler limit */
+    step = 20;   /* step size */
+
+    fahr = lower;
+    while (fahr <= upper) {
+        celsius = (5.0 / 9.0) * (fahr - 32);
+        printf("%3.0f %6.1f\n", fahr, celsius);
+        fahr = fahr + step;
+    }
+}
+#+end_src
+
+#+begin_src 
+  0  -17.8
+ 20   -6.7
+ 40    4.4
+ 60   15.6
+ 80   26.7
+100   37.8
+120   48.9
+140   60.0
+160   71.1
+180   82.2
+200   93.3
+220  104.4
+240  115.6
+260  126.7
+280  137.8
+300  148.9
+#+end_src
+
+The declaration, celsius calculation and the ~printf~ call had to change. Keep in
+mind that in ~fahr = lower~, and ~fahr <= upper~, the values in ~lower~ and ~upper~ are
+converted into ~float~ before proceeding. The rules of this conversion will be
+detailed later.
+
+** ~printf~ Conversion Specication
+
+| code  | description                                                        |
+|-------+--------------------------------------------------------------------|
+| ~%d~    | print as decimal integer                                           |
+| ~%6d~   | print as decimal integer, at least 6 characters wide               |
+| ~%f~    | print as floating point                                            |
+| ~%6f~   | print as floating point, at least 6 characters wide                |
+| ~%.2f~  | print as floating point, 2 characters after decimal point          |
+| ~%6.2f~ | print as floating point, at least 6 wide and 2 after decimal point |
+| ~%o~    | print as octal                                                     |
+| ~%x~    | print as hexadecimal                                               |
+| ~%c~    | print character                                                    |
+| ~%s~    | print string                                                       |
+| ~%%~    | print ~%~ itself.                                                    |
+
