@@ -1,0 +1,37 @@
+#+title: Notes 1.4
+#+date: <2026-05-17 Sun>
+#+weight: 1400
+#+categories: notes
+* Symbolic Constants
+Keeping "magic numbers" like 20 or 300 in a program is bad practice, since it
+conveys little information to readers and are hard to change systematically.
+Instead, we give them a meaningful name. A ~#define~ line defines a /symbolical constant/:
+
+#+begin_src C
+#define <name> <replacement text>
+#+end_src
+
+~name~ should not be in quotes and not be part of another name. They are
+conventionally written in upper case to distinguish between variable.
+
+The replacement text can be any sequence of characters.
+
+With symbolic constants, the temperature conversion program looks like this:
+
+#+begin_src C
+#include <stdio.h>
+
+#define LOWER  0    /* lower limit of table */
+#define UPPER  300  /* upper limit */
+#define STEP   20   /* step size */
+
+/* print Fahrenheit-Celsius table */
+
+main()
+{
+    int fahr;
+
+    for (fahr = LOWER; fahr <= UPPER; fahr = fahr + STEP)
+        printf("%3d %6.1f\n", fahr, (5.0 / 9.0) * (fahr - 32));
+}
+#+end_src
