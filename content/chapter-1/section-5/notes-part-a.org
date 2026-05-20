@@ -1,0 +1,79 @@
+#+title: Notes 1.5, Part A
+#+date: <2026-05-18 Mon>
+#+weight: 1500
+#+categories: notes
+* Text streams
+A /text stream/ is a sequence of characters divided into lines. Each line can have
+0 or more characters and is demarcated by a newline character. The standard
+library ensures any streams conform to this model, and any C programmer need not
+worry about how a text stream is represented outside the program.
+* ~getchar~ and ~putchar~
+~getchar~ is a function in the standard library that reads the /next input
+character/ from a text stream and returns its value:
+
+#+begin_src C
+c = getchar()
+#+end_src
+
+Here, ~c~ contains the next character of input. These characters normally come
+from the keyboard, but can be input from files too.
+
+~putchar~ prints a character each time it is called:
+
+#+begin_src C
+putchar(c)
+#+end_src
+* File Copying, 1st version
+You can write a program that copies its input to its output, one character at a time:
+#+begin_example
+read a character
+while (character is not end-of-file indicator)
+   output the character just read
+   read a character
+#+end_example
+which in C is:
+#+begin_src C
+#include <stdio.h>
+
+/* copy input to output; 1st version */
+main()
+{
+    int c;
+
+    c = getchar();
+    while (c != EOF) {
+        putchar(c);
+        c = getchar();
+    }
+}
+#+end_src
+
+
+Here, ~!=~ means "not equal to" and ~EOF~ is a symbolic constant representing the
+end of file character. Since ~EOF~ is a symbolic constant, it doesn't matter what
+is its actual value in any platform.
+
+Though, we would usually use a ~char~ to store characters, ~c~ must be big enough to
+hold any value ~getchar~ returns, especially ~EOF~ (which is an integer). Therefore we use an ~int~.
+* File Copying, 2nd version
+Since any assignment is an expression, the programs lends itself to a more
+concise version:
+
+#+begin_src C
+#include <stdio.h>
+
+/* copy input to output; 1st version */
+main()
+{
+    int c;
+
+    while ((c = getchar()) != EOF) 
+        putchar(c);
+}
+#+end_src
+
+The assignment src_c{c = getchar()} results in a value that can be used in test,
+meaning the initialisation and the step can be consolidated in the while loop
+condition.
+
+Note that parentheses are necessary, since the /precedence/ of ~!=~ is greater than ~=~ (i.e. the not equal to comparison will get executed before the assignment) .

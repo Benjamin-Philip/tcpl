@@ -1,0 +1,4 @@
+#+title: Section 1.5: Character Input and Output
+#+date: <2026-05-18 Mon>
+#+weight: 1500
+#+categories: section
