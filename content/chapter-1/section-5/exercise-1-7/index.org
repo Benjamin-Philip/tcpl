@@ -1,0 +1,23 @@
+#+title: Exercise 1-7
+#+date: <2026-05-20 Wed>
+#+weight: 1501
+#+categories: exercise
+* The Question
+*Exercise 1-7*: Write a program to print the value of ~EOF~.
+* The Answer
+This one needs no explanation:
+
+#+begin_src C :tangle eof.c :main no
+#include <stdio.h>
+
+main()
+{
+    printf("%d\n", EOF);
+}
+#+end_src
+
+When run, it prints:
+
+#+begin_example
+-1
+#+end_example
