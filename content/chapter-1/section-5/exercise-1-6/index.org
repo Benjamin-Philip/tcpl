@@ -1,0 +1,37 @@
+#+title: Exercise 1-6
+#+date: <2026-05-20 Wed>
+#+weight: 1501
+#+categories: exercise
+* The Question
+*Exercise 1-6*: Verify that the expression ~getchar() != EOF~ is 0 or 1.
+* The Answer
+This is simple enough - instead of printing the character, we print the result of  ~getchar() != EOF~:
+
+#+begin_src C
+#include <stdio.h>
+
+/* copy input to output; 1st version */
+main()
+{
+    int c;
+
+    while (c = (getchar() != EOF))
+        printf("%d\n", c);
+
+    printf("%d\n", c);
+}
+#+end_src
+
+The input ~Foo\n^D~ gives:
+
+#+begin_example
+1
+1
+1
+1
+0
+#+end_example
+
+Note that, ~\n~ counts as one character.
+
+Clearly, the true case is ~1~, and the false case ~0~.
