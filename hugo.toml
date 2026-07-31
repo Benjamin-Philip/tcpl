@@ -1,5 +1,5 @@
 baseURL = 'https://benjamin-philip.github.io/tcpl/'
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'The C Prog Language'
 disqusShortname = "spf13"       # Force giscus
 
