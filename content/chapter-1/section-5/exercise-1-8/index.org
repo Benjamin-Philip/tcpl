@@ -1,0 +1,43 @@
+#+title: Exercise 1-8
+#+date: <2026-07-31 Fri>
+#+weight: 1503
+#+categories: exercise
+* The Question
+*Exercise 1-8*: Write a program to count blanks, tabs and newlines.
+* The Answer
+This is just an extension of the line counting program with separate counters
+for blanks, tabs and newlines:
+
+#+begin_src c :tangle count.c :main no
+#include <stdio.h>
+
+/* count line in input */
+main()
+{
+    int c, nb, nt, nl;
+
+    nb = nt = nl = 0;
+    while ((c = getchar()) != EOF)
+        if (c == ' ')
+            ++nb;
+        else if (c == '\t')
+            ++nt;
+        else if (c == '\n')
+            ++nl;
+    printf("%d %d %d\n", nb, nt, nl);
+}
+#+end_src
+
+The following inputs
+
+#+begin_example
+  2-spaces               2-tabs
+2-newlines
+^D
+#+end_example
+
+yields:
+
+#+begin_example
+2 2 2
+#+end_example
