@@ -1,0 +1,84 @@
+#+title: Notes 1.5, Part B
+#+date: <2026-07-31 Fri>
+#+weight: 1502
+#+categories: notes
+* Character Counting
+** Character Counting, 1st version
+The character counting program is similar to the ~copy~ program, the only
+difference being that for every character, we increment a counter instead of printing it to ~stdout~:
+
+#+begin_src c
+#include <stdio.h>
+
+/* count characters in input; 1st version */
+main()
+{
+    long nc;
+
+    nc = 0;
+    while (getchar() != EOF)
+        ++nc;
+    printf("%ld\n", nc);
+}
+#+end_src
+
+ The key takeaways are:
+
+- ~++nc~ is equivalent to ~nc = nc + 1~
+- the ~++~ (or increment) operator increments by one
+- similarly, the ~--~ operator decrements by one
+- both have prefix (~++nc~) and postfix (~nc++~) forms that have slightly different behaviour
+- ~long~ integers are larger than ~int~ and have at least 32 bits
+- ~%ld~ is the ~printf~ format string for long integers
+** Character Counting, 2nd version
+We can handle even larger numbers using a ~double~. A version using a ~for~
+statement also illustrates another way to write the loop:
+
+#+begin_src c
+#include <stdio.h>
+
+/* count characters in input; 2nd version */
+main()
+{
+    double nc;
+
+    for (nc = 0; getchar() != EOF; ++nc)
+        ;
+    printf("%.0f\n", nc);
+}
+#+end_src
+
+Key takeaways:
+
+- ~printf~ uses ~%f~ for both ~float~ and ~double~
+- ~%.0f~ suppresses the decimal point and the fractional part
+- All the work in the loop is done in the test and increment parts
+- The isolated semicolon, the /null statement/, satisfies the requirement that all for loops have a body
+* Line Counting
+Count lines just comes down to incrementing the counter only if the character is
+a newline:
+
+#+begin_src c
+#include <stdio.h>
+
+/* count line in input */
+main()
+{
+    int c, nl;
+
+    nl = 0;
+    while ((c = getchar()) != EOF)
+        if (c == '\n')
+            ++nl;
+    printf("%d\n", nl);
+}
+#+end_src
+
+The main points are:
+
+- ~==~ is C's equality operator to check if 2 values are equal
+- A character in single quotes is an integer value, corresponding to the
+  numerical value of the character in the machine's character set (typically ASCII)
+- Thus ~'A'~ is a  so called /character constant/
+- Note that ~'A'~ is single character, while ~"A"~ is a string constant that happens
+  to only contain a single character.
