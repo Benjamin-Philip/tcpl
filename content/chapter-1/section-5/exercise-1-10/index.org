@@ -1,0 +1,42 @@
+#+title: Exercise 1-10
+#+date: <2026-08-03 Mon>
+#+weight: 1504
+#+categories: exercise
+* The Question
+*Exercise 1-10*: Write a program to copy its input to its output, replacing each tab by ~\t~, each backspace by ~\b~, and each backslash by ~\\~. This makes tabs and backspaces visible in an unambiguous way. 
+* The Answer
+Again, fairly trivial. Check for each character and print its replacement:
+
+#+begin_src C :tangle copy.c :main no
+#include <stdio.h>
+
+main()
+{
+    int c;
+
+    while ((c = getchar()) != EOF) {
+        if (c == '\t')
+            printf("\\t");
+        else if (c == '\b')
+            printf("\\b");
+        else if (c == '\\')
+            printf("\\");
+        else
+            putchar(c);
+    } 
+}
+#+end_src
+
+Take the following input:
+
+#+begin_example
+$ printf 'fox\tjumpx\bs over\\dogs\n'
+fox     jumps over\dogs
+#+end_example
+
+When piped into copy, produces:
+
+#+begin_example
+$ printf 'fox\tjumpx\bs over\\dogs\n' | ./copy
+fox\tjumpx\bs over\dogs
+#+end_example
