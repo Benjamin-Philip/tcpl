@@ -1,0 +1,48 @@
+#+title: Notes 1.5, Part C
+#+date: <2026-08-03 Mon>
+#+weight: 1505
+#+categories: notes
+* Word Counting
+This is a program that counts lines, words and characters, with the loose
+definition that a word is any sequence of characters that does not contain a
+blank, tab or newline, i.e. a bare-bones version of the UNIX ~wc~:
+
+#+begin_src C
+#include <stdio.h>
+
+#define IN 1    /* inside a word */
+#define OUT 0   /* outside a word */
+
+/* count lines, words, and characters in input */
+main()
+{
+    int c, nl, nw, nc, state;
+
+    state = OUT;
+    nl = nw = nc = 0;
+    while ((c = getchar()) != EOF) {
+        ++nc;
+        if (c == '\n')
+            ++nl;
+        if (c == ' ' || c == '\n' || c == '\t')
+            state = OUT;
+        else if (state == OUT) {
+            state = IN;
+            ++nw;
+        }
+    }
+    printf("%d %d %d\n", nl, nw, nc);
+}
+#+end_src
+* Key points
+- ~nl = nw = nc = 0~ is equivalent to ~nl = (nw = (nc = 0))~, and sets all the variables to zero
+- ~||~ means OR and ~&&~ means AND
+- Both ~||~ and ~&&~ are evaluated left to right, and guarantee that evaluation stops as soon as the truth of falsehood is known
+- The syntax for an ~if-else~ statement is the following:
+  #+begin_src C
+if (<expression>)
+    <statement_1>
+else
+    <statement_2>
+  #+end_src
+
